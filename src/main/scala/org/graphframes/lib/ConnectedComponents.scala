@@ -308,8 +308,9 @@ object ConnectedComponents extends Logging {
     val g = prepare(graph)
     val vv = g.vertices
     var ee = g.edges.persist(intermediateStorageLevel) // src < dst
-    val numEdges = ee.count()
-    logger.info(s"$logPrefix Found $numEdges edges after preparation.")
+//    val numEdges = ee.count()
+    logger.info("***** Not printing count for now ...")
+    //logger.info(s"$logPrefix Found ${ee.count()} edges after preparation.")
 
     var converged = false
     var iteration = 1
